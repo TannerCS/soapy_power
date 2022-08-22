@@ -179,7 +179,7 @@ class RtlPowerWriter(BaseWriter):
             step = f_array[1] - f_array[0]
             row = [
                 time_stop.strftime('%Y-%m-%d'), time_stop.strftime('%H:%M:%S'),
-                f_array[0], f_array[-1] + step, step, samples
+                int(f_array[0]), int(f_array[-1] + step), step, samples
             ]
             row += list(pwr_array)
             self.output.write('{}\n'.format(', '.join(str(x) for x in row)))

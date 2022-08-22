@@ -42,7 +42,7 @@ if __name__ == '__main__':
                 
                 time_start = datetime.datetime.fromtimestamp(header.time_start)
                 time_stop = datetime.datetime.fromtimestamp(header.time_stop)
-                write_rtl_power(rtlpower_file, time_start, time_stop, header.start, header.stop, header.step, header.samples, pwr_array)
+                write_rtl_power(rtlpower_file, time_start, time_stop, int(header.start), int(header.stop), header.step, header.samples, pwr_array)
             
         
     
